@@ -1,0 +1,44 @@
+html{font-size:clamp(14px,1vw + 10px,16px)}
+.character-portrait{display:block;width:clamp(85px,18vw,190px);height:clamp(85px,18vw,160px);object-fit:cover;border-radius:18px;font-size:14px}
+.mood-choice{display:flex;align-items:center;gap:8px}
+.mood-choice .character-portrait{width:44px;height:44px;border-radius:10px;flex-shrink:0;pointer-events:none}
+#unlockForm{display:grid;gap:12px;margin-top:20px;max-width:400px}
+#entryForm{display:grid;gap:12px}
+.journal-record{margin-top:16px}
+.journal-record p{white-space:pre-wrap}
+[hidden]{display:none!important}
+body{overflow-wrap:anywhere}
+.app-shell{width:100%;padding:clamp(20px,4vw,34px) clamp(14px,3vw,22px) 60px}
+.topbar>div,.section-heading>div,.grid>*{min-width:0}
+h1{font-size:clamp(1.8rem,5vw,3.25rem);line-height:1.12}
+h2{font-size:clamp(1.5rem,3.5vw,1.875rem);line-height:1.2}
+h3{font-size:clamp(1.1rem,2.5vw,1.25rem);line-height:1.3}
+p{line-height:1.6}
+.hero{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:16px;align-items:center;padding:clamp(20px,4vw,32px);min-height:0}
+.hero>div:first-child{min-width:0}
+.hero h2{font-size:clamp(1.8rem,5.5vw,3.625rem);line-height:1.12}
+.hero p:not(.eyebrow){max-width:100%;margin-bottom:0}
+.mood-orb{position:static;font-size:clamp(40px,10vw,100px);line-height:1}
+.mood-edit{position:static;justify-self:start;grid-column:1 / -1;margin-top:4px}
+.tabs{flex-wrap:wrap;overflow:visible;gap:6px}
+.tab{flex:1 1 auto;text-align:center;padding:12px 14px}
+.section-heading{flex-wrap:wrap}
+.section-heading .primary{max-width:100%}
+.card{padding:clamp(18px,3vw,24px)}
+.media-card{padding:0}
+.media-grid{grid-template-columns:repeat(auto-fit,minmax(min(100%,210px),1fr))}
+.media-img{height:auto;aspect-ratio:2 / 3}
+.media-body p{white-space:pre-wrap}
+input,textarea,select{max-width:100%;min-width:0;width:100%;font-size:16px}
+input[type=checkbox]{width:auto;flex-shrink:0}
+.task label{display:flex;align-items:baseline;gap:8px;line-height:1.5}
+.task input{margin:0}
+.inline-form button{flex-shrink:0}
+button{white-space:normal;line-height:1.3;min-height:40px}
+dialog{max-height:calc(100dvh - 32px);overflow:auto;padding:clamp(18px,4vw,26px)}
+.moods{display:grid;grid-template-columns:repeat(2,minmax(0,1fr))}
+.mood-choice{font:inherit;min-width:0}
+.dialog-actions{flex-wrap:wrap}
+.music-card{width:100%}
+@media(max-width:700px){.grid.two{grid-template-columns:1fr}}
+@media(max-width:380px){.hero{gap:10px}.mood-orb{font-size:36px}.tabs .tab{flex-basis:40%}.inline-form{flex-wrap:wrap}.inline-form input{flex-basis:100%}.inline-form button{width:100%}.topbar{gap:8px}.eyebrow{font-size:10px;letter-spacing:.12em}}
