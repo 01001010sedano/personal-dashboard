@@ -32,6 +32,7 @@
 
     <dialog id="moodDialog"><form method="dialog" id="moodForm"><h2>What’s your mode?</h2><div class="moods" id="moodChoices"></div><textarea id="moodNote" placeholder="Why do you feel this way? (optional)"></textarea><div class="dialog-actions"><button class="ghost-btn" value="cancel">Cancel</button><button class="primary" value="save">Save mood</button></div></form></dialog>
     <dialog id="mediaDialog"><form method="dialog" id="mediaForm"><h2 id="mediaDialogTitle">Add a show</h2><input id="mediaTitle" placeholder="Title" required /><input id="mediaImage" placeholder="Paste an image, or an image URL" /><select id="mediaStatus"><option>Want to watch</option><option>Currently watching</option><option>Finished</option></select><input id="mediaRating" type="number" min="0" max="5" step="0.5" placeholder="Personal rating (0–5)" /><textarea id="mediaNote" placeholder="Your notes…"></textarea><div class="dialog-actions"><button class="ghost-btn" value="cancel">Cancel</button><button class="primary" value="save">Add to library</button></div></form></dialog>
+    <script src="spotify-config.js"></script>
     <script src="app.js"></script>
   </body>
 </html>
