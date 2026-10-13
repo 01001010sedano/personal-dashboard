@@ -1,4 +1,9 @@
 html{font-size:clamp(14px,1vw + 10px,16px)}
+.spotify-track{display:flex;gap:18px;align-items:center;margin:24px 0}
+.spotify-track img{width:clamp(72px,20vw,140px);aspect-ratio:1;object-fit:cover;border-radius:16px}
+.spotify-track>div{min-width:0;flex:1}
+.spotify-track progress{display:block;width:100%;margin:12px 0;accent-color:var(--accent)}
+.spotify-track a{font-size:14px;color:var(--ink)}
 .character-portrait{display:block;width:clamp(85px,18vw,190px);height:clamp(85px,18vw,160px);object-fit:cover;border-radius:18px;font-size:14px}
 .mood-choice{display:flex;align-items:center;gap:8px}
 .mood-choice .character-portrait{width:44px;height:44px;border-radius:10px;flex-shrink:0;pointer-events:none}
