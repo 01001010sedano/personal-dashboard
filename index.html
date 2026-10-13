@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Inside My Head</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body data-mood="joy">
+    <main class="app-shell">
+      <header class="topbar">
+        <div><p class="eyebrow">PERSONAL DASHBOARD</p><h1>Inside My Head <span>✦</span></h1></div>
+        <button class="ghost-btn" id="themeBtn" title="Toggle dark mode">☼</button>
+      </header>
+
+      <section class="hero card">
+        <div><p class="eyebrow">MODE OF THE DAY</p><h2 id="moodTitle">Joy</h2><p id="moodDetails">Bright, hopeful, and ready for little wins.</p></div>
+        <div class="mood-orb" id="moodOrb">☺</div>
+        <button class="mood-edit" id="moodBtn">Change mood</button>
+      </section>
+
+      <nav class="tabs" aria-label="Dashboard sections">
+        <button class="tab active" data-tab="home">Home</button><button class="tab" data-tab="shows">Shows</button><button class="tab" data-tab="movies">Movies</button><button class="tab" data-tab="music">Music</button>
+      </nav>
+
+      <section id="home" class="panel active-panel"><div class="grid two"><article class="card"><div class="section-heading"><h3>Today</h3><button class="plus">+</button></div><div id="tasks"></div><form id="taskForm" class="inline-form"><input id="taskInput" placeholder="Add a tiny task…" required /><button>Add</button></form></article><article class="card"><div class="section-heading"><h3>How are you feeling?</h3></div><textarea id="journal" placeholder="A quick note about today…"></textarea><p class="save-note">Saved automatically ✦</p></article></div></section>
+
+      <section id="shows" class="panel"><div class="section-heading"><div><p class="eyebrow">YOUR LIBRARY</p><h2>Shows</h2></div><button class="primary" data-add="show">+ Add show</button></div><div class="media-grid" id="showList"></div></section>
+      <section id="movies" class="panel"><div class="section-heading"><div><p class="eyebrow">YOUR LIBRARY</p><h2>Movies</h2></div><button class="primary" data-add="movie">+ Add movie</button></div><div class="media-grid" id="movieList"></div></section>
+      <section id="music" class="panel"><div class="card music-card"><p class="eyebrow">SPOTIFY CONNECTION</p><h2>Live music, when you’re ready.</h2><p>Connect Spotify to show your currently playing track, playlists, and recently played songs.</p><button class="primary" id="spotifyBtn">Connect Spotify</button><p class="save-note">Uses OAuth PKCE. Your client secret never belongs in this app.</p></div></section>
+    </main>
+
+    <dialog id="moodDialog"><form method="dialog" id="moodForm"><h2>What’s your mode?</h2><div class="moods" id="moodChoices"></div><textarea id="moodNote" placeholder="Why do you feel this way? (optional)"></textarea><div class="dialog-actions"><button class="ghost-btn" value="cancel">Cancel</button><button class="primary" value="save">Save mood</button></div></form></dialog>
+    <dialog id="mediaDialog"><form method="dialog" id="mediaForm"><h2 id="mediaDialogTitle">Add a show</h2><input id="mediaTitle" placeholder="Title" required /><input id="mediaImage" placeholder="Paste an image, or an image URL" /><select id="mediaStatus"><option>Want to watch</option><option>Currently watching</option><option>Finished</option></select><input id="mediaRating" type="number" min="0" max="5" step="0.5" placeholder="Personal rating (0–5)" /><textarea id="mediaNote" placeholder="Your notes…"></textarea><div class="dialog-actions"><button class="ghost-btn" value="cancel">Cancel</button><button class="primary" value="save">Add to library</button></div></form></dialog>
+    <script src="app.js"></script>
+  </body>
+</html>
